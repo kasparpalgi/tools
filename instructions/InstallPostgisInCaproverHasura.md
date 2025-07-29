@@ -54,11 +54,11 @@ Make sure to update versions! This is for my old Postgres 12.
 
 6. **Enable PostGIS extensions**:
 
-    Don't forget below to change also `your_catabase` DB name!
+    Don't forget below to change also `<DB_NAME>`!
 
    ```bash
    docker exec -it <DB_CONTAINER> psql -U postgres
-   \c your_database
+   \c <DB_NAME>
    CREATE EXTENSION IF NOT EXISTS postgis;
    CREATE EXTENSION IF NOT EXISTS postgis_topology;
    \dx
