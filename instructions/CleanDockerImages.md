@@ -23,7 +23,7 @@ sudo find /var/lib/docker/volumes/captain--iot-eclipse-log/_data -type f -exec t
 
 1. Identify PostgreSQL container `docker ps`
 2. `docker exec -it <NAME_HERE.. eg. srv-captain--api-db.1.n86kik1mbqh5h0c2trj4wuul1> psql -U postgres -d default`
-3. `VACUUM (FULL, VERBOSE);`
+3. `VACUUM (FULL,);`
 
 ## Auto cleanup
 
@@ -55,7 +55,7 @@ find /var/lib/docker/volumes/captain--iot-eclipse-log/_data -type f -exec trunca
 CONTAINER=$(docker ps -q -f name=srv-captain--api-db)
 if [ -n "$CONTAINER" ]; then
   docker exec "$CONTAINER" \
-    psql -U postgres -d default -c "VACUUM VERBOSE;"
+    psql -U postgres -d default -c "VACUUM;"
 fi
 
 CONTAINER=$(docker ps -q -f name=srv-captain--perroz-woo-db-data)
@@ -67,37 +67,37 @@ fi
 CONTAINER=$(docker ps -q -f name=srv-captain--automate-db)
 if [ -n "$CONTAINER" ]; then
   docker exec "$CONTAINER" \
-    psql -U n8n -d n8n -c "VACUUM VERBOSE;"
+    psql -U n8n -d n8n -c "VACUUM;"
 fi
 
 CONTAINER=$(docker ps -q -f name=srv-captain--apps-db-data)
 if [ -n "$CONTAINER" ]; then
   docker exec "$CONTAINER" \
-    psql -U postgres -d default -c "VACUUM VERBOSE;"
+    psql -U postgres -d default -c "VACUUM;"
 fi
 
 CONTAINER=$(docker ps -q -f name=srv-captain--cmsraamatu-data)
 if [ -n "$CONTAINER" ]; then
   docker exec "$CONTAINER" \
-    psql -U pguser -d default -c "VACUUM VERBOSE;"
+    psql -U pguser -d default -c "VACUUM;"
 fi
 
 CONTAINER=$(docker ps -q -f name=srv-captain--life-effect-db)
 if [ -n "$CONTAINER" ]; then
   docker exec "$CONTAINER" \
-    psql -U posuse -d default -c "VACUUM VERBOSE;"
+    psql -U posuse -d default -c "VACUUM;"
 fi
 
 CONTAINER=$(docker ps -q -f name=srv-captain--leadiq-be-db-data)
 if [ -n "$CONTAINER" ]; then
   docker exec "$CONTAINER" \
-    psql -U hcAuRRv -d default -c "VACUUM VERBOSE;"
+    psql -U hcAuRRv -d default -c "VACUUM;"
 fi
 
 CONTAINER=$(docker ps -q -f name=srv-captain--api-raamat-db-data)
 if [ -n "$CONTAINER" ]; then
   docker exec "$CONTAINER" \
-    psql -U pguser -d default -c "VACUUM VERBOSE;"
+    psql -U pguser -d default -c "VACUUM;"
 fi
 ```
 
