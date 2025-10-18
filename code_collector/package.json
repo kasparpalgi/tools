@@ -1,0 +1,24 @@
+{
+  "name": "code_collector",
+  "version": "0.0.1",
+  "description": "Consolidate code (text) from multiple files into one single file",
+  "homepage": "https://github.com/kasparpalgi/tools#readme",
+  "bugs": {
+    "url": "https://github.com/kasparpalgi/tools/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasparpalgi/tools.git"
+  },
+  "license": "ISC",
+  "author": "Kaspar L. Palgi",
+  "type": "commonjs",
+  "main": "conso.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "bin": {
+    "conso": "./conso.js"
+  }
+}
