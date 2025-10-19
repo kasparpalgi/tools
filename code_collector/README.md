@@ -1,4 +1,4 @@
-# Code Consolidator
+# Conso - Code Consolidator
 
 A simple CLI tool to consolidate multiple code files into a single `_notes/code` file in your current directory. Suggested: have the `_notes` folder in the `gitignore`. Perfect for quickly gathering code or any text files into one single file for documentation, sharing, review or for AI context.
 
@@ -21,14 +21,14 @@ A simple CLI tool to consolidate multiple code files into a single `_notes/code`
 
 1. **Clone or download the script**
    ```bash
-   curl -O https://raw.githubusercontent.com/yourrepo/consolidate-code.js
+   curl -O https://raw.githubusercontent.com/yourrepo/conso.js
    # Or manually create the file with the script content
    ```
 
 2. **Create a directory for the tool**
    ```bash
-   mkdir -p ~/bin/consolidate-tool
-   cd ~/bin/consolidate-tool
+   mkdir -p ~/bin/conso
+   cd ~/bin/conso
    mv /path/to/consolidate-code.js .
    ```
 
