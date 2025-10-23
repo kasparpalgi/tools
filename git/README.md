@@ -1,5 +1,7 @@
 # Making Git Scripts Runnable from Anywhere
 
+![gc "logs"](screenshot.png)
+
 Two scripts for Mac/Linux/Win to run multiple git commands with one short command. 
 
 1. ´gc "your commit message here"´ will ´git pull´, ´git add .´, ´git commit -m´ and ´git push´.
